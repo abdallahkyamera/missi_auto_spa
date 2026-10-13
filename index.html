@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Missi Auto Spa | Care Beyond the Ordinary</title>
+
+    <meta name="description"
+          content="Welcome to Missi Auto Spa. Discover car washing, spa treatments, massage, sauna, salon, dining and secure parking.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#F8F6F0] text-[#26372D]">
+
+    <!-- NAVIGATION BAR -->
+    <header class="site-header">
+        <nav class="container mx-auto px-6 py-5 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="index.html" class="brand">
+                <span class="brand-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </span>
+
+                <span>
+                    <span class="brand-name">MISSI</span>
+                    <span class="brand-subtitle">AUTO SPA</span>
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Book Button -->
+            <a href="contact.html" class="nav-book">
+                Book a Visit
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button
+                id="menu-toggle"
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="mobile-book">Book a Visit</a>
+            
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section container mx-auto px-6">
+
+            <div class="hero-content reveal">
+
+                <span class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    WELCOME TO MISSI AUTO SPA
+                </span>
+
+                <h1>
+                    Care for your car.
+                    <span>Space for yourself.</span>
+                </h1>
+
+                <p class="hero-description">
+                    More than a destination, it's your moment to unwind.
+                    Enjoy professional car care, refreshing wellness
+                    experiences and thoughtful hospitality, all in one place.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="services.html" class="button-primary">
+                        Explore Our Services
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#about-preview" class="button-secondary">
+                        <i class="fa-regular fa-circle-play"></i>
+                        Discover Missi
+                    </a>
+   
+                </div>
+
+                <div class="hero-note">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>Care, comfort and convenience under one roof.</span>
+                </div>
+
+            </div>
+
+
+            <!-- Hero Image -->
+            <div class="hero-visual reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=85"
+                    alt="Professional car detailing and vehicle care"
+                    class="hero-image">
+
+                <div class="image-caption">
+                    <span class="caption-icon">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </span>
+
+                    <div>
+                        <strong>A better kind of experience</strong>
+                        <p>Every visit, thoughtfully delivered.</p>
+                    </div>
+                </div>
+
+                <div class="image-decoration"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES INTRODUCTION -->
+        <section class="services-section py-20">
+
+            <div class="container mx-auto px-6">
+
+                <div class="section-heading reveal">
+                    <span class="eyebrow">YOUR ONE-STOP DESTINATION</span>
+
+                    <h2>
+                        Everything you need.
+                        <span>All in one place.</span>
+                    </h2>
+
+                    <p>
+                        From a spotless car to a well-deserved moment
+                        of relaxation, we bring life's little luxuries
+                        together.
+                    </p>
+                </div>
+
+
+                <!-- Service Cards -->
+                <div class="services-grid">
+
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+
+                        <h3>Washing Bay</h3>
+
+                        <p>
+                            Give your vehicle the attention it deserves
+                            with a fresh, thorough clean.
+                        </p>
+
+                        <a href="services.html" class="service-link">
+                            Discover more
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+
+                        <h3>Spa & Massage</h3>
+
+                        <p>
+                            Slow down, release tension and enjoy time
+                            dedicated entirely to you.
+                        </p>
+
+                        <a href="services.html" class="service-link">
+                            Discover more
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-hot-tub-person"></i>
+                        </div>
+
+                        <h3>Sauna</h3>
+
+                        <p>
+                            Make room for warmth, rest and a refreshing
+                            wellness experience.
+                        </p>
+
+                        <a href="services.html" class="service-link">
+                            Discover more
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+
+                        <h3>Salon</h3>
+
+                        <p>
+                            Refresh your look with personal grooming
+                            and beauty services.
+                        </p>
+
+                        <a href="services.html" class="service-link">
+                            Discover more
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+
+                        <h3>Chicken & kirenge</h3>
+
+                        <p>
+                            Enjoy delicious boiled chicken or kirenge, and a
+                            welcoming place to take a break.
+                        </p>
+
+                        <a href="services.html" class="service-link">
+                            Discover more
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-square-parking"></i>
+                        </div>
+
+                        <h3>Secure Parking</h3>
+
+                        <p>
+                            Enjoy convenient parking while you make
+                            the most of your visit.
+                        </p>
+
+                        <a href="services.html" class="service-link">
+                            Discover more
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT PREVIEW -->
+        <section id="about-preview" class="about-section py-20">
+
+            <div class="container mx-auto px-6 about-layout">
+
+                <div class="about-image-wrap reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85"
+                        alt="Peaceful spa environment"
+                        class="about-image">
+                </div>
+
+                <div class="about-content reveal">
+
+                    <span class="eyebrow">THE MISSI EXPERIENCE</span>
+
+                    <h2>
+                        A little care goes
+                        <span>a long way.</span>
+                    </h2>
+
+                    <p>
+                        We believe taking care of your vehicle should
+                        not mean putting your own comfort on hold.
+                        Missi Auto Spa brings car care, relaxation,
+                        grooming and hospitality into one welcoming
+                        destination.
+                    </p>
+
+                    <p>
+                        Whether you're here for a quick wash or a
+                        longer day of self-care, we want every visit
+                        to feel worthwhile.
+                    </p>
+
+                    <a href="about.html" class="button-primary">
+                        Get to Know Us
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-section py-20">
+
+            <div class="container mx-auto px-6 text-center reveal">
+
+                <span class="eyebrow">YOUR TIME STARTS HERE</span>
+
+                <h2>
+                    Your car deserves care.
+                    <span>You deserve a break.</span>
+                </h2>
+
+                <p>
+                    Make your next stop a better experience at Missi Auto Spa.
+                </p>
+
+                <a href="contact.html" class="button-primary">
+                    Plan Your Visit
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container mx-auto px-6">
+
+            <div class="footer-main">
+
+                <a href="index.html" class="brand footer-brand">
+                    <span class="brand-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </span>
+
+                    <span>
+                        <span class="brand-name">MISSI</span>
+                        <span class="brand-subtitle">AUTO SPA</span>
+                    </span>
+                </a>
+
+                <p>
+                    Thoughtful car care, wellness and hospitality
+                    in one welcoming destination.
+                </p>
+
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+  
+<a href="https://www.tiktok.com/@missi.auto.spa?_r=1&_t=ZS-9AVzcvRrHBo" target="_blank" rel="noopener" aria-label="Follow us on TikTok" class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-yellow-500 bg-yellow-300 text-gray-900 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-yellow-400">
+  <i class="fa-brands fa-tiktok text-2xl"></i>
+</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="current-year">2026</span>
+                    Missi Auto Spa. All rights reserved.
+                </p>
+
+                <a href="contact.html">Get in touch</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Our custom JavaScript -->
+    <script src="home.js"></script>
+
+</body>
+</html>

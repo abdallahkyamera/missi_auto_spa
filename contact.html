@@ -1,0 +1,629 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Missi Auto Spa to ask about our services or arrange a visit.">
+  <title>Contact Us | Missi Auto Spa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    :root {
+      --cream: #F8F6F0;
+      --white: #FFFFFF;
+      --green: #26372D;
+      --green-light: #405747;
+      --brown: #9B7653;
+      --text: #343B35;
+      --muted: #737A72;
+      --border: #E5E1D7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    .container { width: min(1120px, 90%); margin: auto; }
+    .eyebrow {
+      color: var(--brown);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.3rem); }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    p { color: var(--muted); }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+    .brand { color: var(--green); font-weight: 700; line-height: 1.1; }
+    .brand strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.55rem; }
+    .brand span { font-size: .68rem; letter-spacing: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 27px; }
+    .nav-links a { font-size: .9rem; font-weight: 600; }
+    .nav-links a:hover, .nav-links a.active { color: var(--brown); }
+    .nav-links .nav-cta { background: var(--green); color: white; padding: 11px 17px; border-radius: 4px; }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--green);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .contact-hero {
+      padding: 80px 0;
+      text-align: center;
+      background: #EEECE3;
+    }
+    .contact-hero h1 { margin: 12px auto 18px; }
+    .contact-hero p { max-width: 650px; margin: auto; font-size: 1.05rem; }
+
+    .contact-section { padding: 75px 0; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 35px;
+      align-items: start;
+    }
+    .contact-info h2 { margin: 12px 0 15px; }
+    .contact-info > p { margin-bottom: 28px; }
+
+    .info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .info-icon {
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: #EEECE3;
+      color: var(--green);
+      border-radius: 50%;
+    }
+    .info-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .info-card p { font-size: .92rem; overflow-wrap: anywhere; }
+
+    .contact-form {
+      padding: 35px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+    }
+    .contact-form h2 { margin-bottom: 8px; }
+    .form-intro { margin-bottom: 25px; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: .88rem;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: #FCFBF8;
+      color: var(--text);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green-light);
+      box-shadow: 0 0 0 3px rgba(64, 87, 71, .1);
+    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .submit-btn {
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border: 1px solid var(--green);
+      border-radius: 4px;
+      background: var(--green);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s;
+    }
+    .submit-btn:hover { background: var(--green-light); }
+    .form-message { margin-top: 15px; font-size: .92rem; }
+    .form-message:empty { display: none; }
+    .form-message.error { color: #A12A2A; }
+    .form-message.success { color: var(--green); }
+
+    .cta { padding: 65px 0; background: var(--green); text-align: center; }
+    .cta h2 { color: white; margin-bottom: 12px; }
+    .cta p { max-width: 600px; margin: 0 auto 22px; color: #E0E5DF; }
+    .cta a {
+      display: inline-block;
+      padding: 12px 22px;
+      background: white;
+      color: var(--green);
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    footer { background: #1D2B22; color: white; padding: 35px 0; }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    footer p { color: #D1D8D1; font-size: .9rem; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a:hover { color: #D2B391; }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 800px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        padding: 22px 5%;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links .nav-cta { text-align: center; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-section { padding: 55px 0; }
+      .contact-hero { padding: 60px 0; }
+    }
+    @media (max-width: 520px) {
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .contact-form { padding: 23px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <strong>MISSI</strong><span>AUTO SPA</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a class="active" href="contact.html">Contact</a>
+        <a class="nav-cta" href="#bookingForm">Book a Visit</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h1>We would love to hear from you.</h1>
+        <p>Ask us about our services, make an enquiry or let us know when you would like to visit Missi Auto Spa.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <span class="eyebrow">Contact Information</span>
+          <h2>Let's plan your visit.</h2>
+          <p>Use the details below to contact us.</p>
+
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h3>Phone / WhatsApp</h3>
+              <p>0776356325</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h3>Our Location</h3>
+              <p>Kampala nateete behind total wakaliga</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h3>Opening Hours</h3>
+              <p>7:00 - 1:00</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="bookingForm">
+          <h2>Send an Enquiry</h2>
+          <p class="form-intro">Complete the form to prepare your booking request.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service You Need *</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option value="Washing Bay">Washing Bay</option>
+              <option value="Spa Treatments">Spa Treatments</option>
+              <option value="Massage">Massage</option>
+              <option value="Sauna">Sauna</option>
+              <option value="Salon">Salon</option>
+              <option value="Boiled Chicken and Dining">Boiled Chicken and Dining</option>
+              <option value="Parking">Parking</option>
+              <option value="General Enquiry">General Enquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="visitDate">Preferred Visit Date</label>
+            <input type="date" id="visitDate" name="visitDate">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us more about your request..."></textarea>
+          </div>
+
+          <button class="submit-btn" type="submit">
+            Prepare Booking Request <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container reveal">
+        <h2>We look forward to welcoming you.</h2>
+        <p>Explore our services and find the right option for your next visit.</p>
+        <a href="services.html">Explore Our Services <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html" style="color:white">
+          <strong>MISSI</strong><span>AUTO SPA</span>
+        </a>
+        <p style="margin-top:10px">Car care and personal care in one place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p>&copy; <span id="year"></span> Missi Auto Spa.</p>
+    </div>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Missi Auto Spa to ask about our services or arrange a visit.">
+  <title>Contact Us | Missi Auto Spa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F8F6F0',
+            sand: '#EEECE3',
+            line: '#E5E1D7',
+            forest: { DEFAULT: '#26372D', light: '#405747', dark: '#1D2B22' },
+            clay: { DEFAULT: '#9B7653', light: '#D2B391' },
+            ink: '#343B35',
+            muted: '#737A72'
+          },
+          fontFamily: {
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    .form-message:empty { display: none; }
+    .form-message.error { color: #A12A2A; }
+    .form-message.success { color: #26372D; }
+  </style>
+</head>
+<body class="bg-cream font-sans text-ink leading-relaxed antialiased">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur">
+    <nav class="relative mx-auto flex min-h-[78px] w-[min(1120px,90%)] items-center justify-between gap-6" aria-label="Main navigation">
+      <a href="index.html" class="leading-none text-forest">
+        <strong class="block font-serif text-[1.55rem] font-bold tracking-wide">MISSI</strong>
+        <span class="text-[.68rem] font-bold tracking-[3px]">AUTO SPA</span>
+      </a>
+
+      <button id="menuToggle" class="rounded p-2 text-2xl text-forest focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-light md:hidden" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div id="navLinks" class="absolute left-0 top-[78px] hidden w-full flex-col items-stretch gap-4 border-b border-line bg-white px-[5%] py-6 shadow-sm md:static md:flex md:w-auto md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:shadow-none [&.open]:flex">
+        <a href="index.html" class="text-sm font-semibold transition-colors hover:text-clay">Home</a>
+        <a href="services.html" class="text-sm font-semibold transition-colors hover:text-clay">Services</a>
+        <a href="about.html" class="text-sm font-semibold transition-colors hover:text-clay">About Us</a>
+        <a href="contact.html" class="border-b-2 border-clay pb-0.5 text-sm font-semibold text-clay md:self-center">Contact</a>
+        <a href="#bookingForm" class="rounded bg-forest px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-forest-light md:py-2.5">Book a Visit</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="bg-sand py-16 md:py-24">
+      <div class="reveal mx-auto w-[min(1120px,90%)]">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="inline-flex items-center gap-2 rounded-full border border-clay/40 bg-white px-4 py-1.5 text-sm font-semibold text-clay">
+            <i class="fa-solid fa-envelope-open-text"></i> Get in touch
+          </span>
+          <h1 class="mt-6 font-serif text-4xl font-semibold leading-tight text-forest sm:text-5xl lg:text-6xl">We would love to hear from you.</h1>
+          <p class="mx-auto mt-5 max-w-xl text-base text-muted sm:text-lg">Ask us about our services, make an enquiry or let us know when you would like to visit Missi Auto Spa.</p>
+
+          <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="tel:+256776356325" class="inline-flex w-full items-center justify-center gap-2 rounded bg-forest px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-forest-light sm:w-auto">
+              <i class="fa-solid fa-phone"></i> Call us now
+            </a>
+            <a href="https://wa.me/256776356325" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center gap-2 rounded border border-forest bg-white px-6 py-3 text-sm font-semibold text-forest transition-colors hover:bg-forest hover:text-white sm:w-auto">
+              <i class="fa-brands fa-whatsapp text-base"></i> Chat on WhatsApp
+            </a>
+
+             
+<a href="https://www.tiktok.com/@missi.auto.spa?_r=1&_t=ZS-9AVzcvRrHBo" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center gap-2 rounded border border-forest bg-white px-6 py-3 text-sm font-semibold text-forest transition-colors hover:bg-forest hover:text-white sm:w-auto">
+  <i class="fa-brands fa-tiktok text-base"></i> Follow on TikTok
+</a>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-14 md:py-20">
+      <div class="mx-auto grid w-[min(1120px,90%)] items-start gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-12">
+
+        <div class="reveal">
+          <span class="text-sm font-semibold text-clay">Contact information</span>
+          <h2 class="mb-3 mt-2 font-serif text-3xl font-semibold text-forest md:text-4xl">Let's plan your visit.</h2>
+          <p class="mb-8 text-muted">Use the details below to contact us.</p>
+
+          <div class="space-y-4">
+            <a href="tel:+256776356325" class="group flex items-start gap-4 rounded-md border border-line bg-white p-5 transition-colors hover:border-clay">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-sand text-forest transition-colors group-hover:bg-forest group-hover:text-white">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-forest">Phone / WhatsApp</h3>
+                <p class="text-[.95rem] text-muted">0776356325</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Nateete+behind+Total+Wakaliga+Kampala" target="_blank" rel="noopener" class="group flex items-start gap-4 rounded-md border border-line bg-white p-5 transition-colors hover:border-clay">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-sand text-forest transition-colors group-hover:bg-forest group-hover:text-white">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-forest">Our location</h3>
+                <p class="break-words text-[.95rem] text-muted">Kampala nateete behind total wakaliga</p>
+              </div>
+            </a>
+
+            <div class="flex items-start gap-4 rounded-md border border-line bg-white p-5">
+              <div class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-sand text-forest">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-forest">Opening hours</h3>
+                <p class="text-[.95rem] text-muted">7:00 - 1:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form id="bookingForm" class="reveal scroll-mt-28 rounded-md border border-line border-t-4 border-t-forest bg-white p-6 shadow-sm sm:p-9">
+          <h2 class="mb-2 font-serif text-2xl font-semibold text-forest md:text-3xl">Send an Enquiry</h2>
+          <p class="mb-7 text-muted">Complete the form to prepare your booking request.</p>
+
+          <div class="grid gap-x-4 sm:grid-cols-2">
+            <div class="mb-5">
+              <label for="fullName" class="mb-1.5 block text-sm font-semibold text-forest">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required
+                class="w-full rounded border border-line bg-[#FCFBF8] px-3.5 py-3 text-ink placeholder:text-muted/70 transition focus:border-forest-light focus:outline-none focus:ring-4 focus:ring-forest-light/10">
+            </div>
+            <div class="mb-5">
+              <label for="phone" class="mb-1.5 block text-sm font-semibold text-forest">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number" required
+                class="w-full rounded border border-line bg-[#FCFBF8] px-3.5 py-3 text-ink placeholder:text-muted/70 transition focus:border-forest-light focus:outline-none focus:ring-4 focus:ring-forest-light/10">
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label for="email" class="mb-1.5 block text-sm font-semibold text-forest">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com"
+              class="w-full rounded border border-line bg-[#FCFBF8] px-3.5 py-3 text-ink placeholder:text-muted/70 transition focus:border-forest-light focus:outline-none focus:ring-4 focus:ring-forest-light/10">
+          </div>
+
+          <div class="grid gap-x-4 sm:grid-cols-2">
+            <div class="mb-5">
+              <label for="service" class="mb-1.5 block text-sm font-semibold text-forest">Service You Need *</label>
+              <select id="service" name="service" required
+                class="w-full rounded border border-line bg-[#FCFBF8] px-3.5 py-3 text-ink transition focus:border-forest-light focus:outline-none focus:ring-4 focus:ring-forest-light/10">
+                <option value="">Choose a service</option>
+                <option value="Washing Bay">Washing Bay</option>
+                <option value="Spa Treatments">Spa Treatments</option>
+                <option value="Massage">Massage</option>
+                <option value="Sauna">Sauna</option>
+                <option value="Salon">Salon</option>
+                <option value="Boiled Chicken and Dining">Boiled Chicken and Dining</option>
+                <option value="Parking">Parking</option>
+                <option value="General Enquiry">General Enquiry</option>
+              </select>
+            </div>
+            <div class="mb-5">
+              <label for="visitDate" class="mb-1.5 block text-sm font-semibold text-forest">Preferred Visit Date</label>
+              <input type="date" id="visitDate" name="visitDate"
+                class="w-full rounded border border-line bg-[#FCFBF8] px-3.5 py-3 text-ink transition focus:border-forest-light focus:outline-none focus:ring-4 focus:ring-forest-light/10">
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="message" class="mb-1.5 block text-sm font-semibold text-forest">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us more about your request..."
+              class="min-h-[130px] w-full resize-y rounded border border-line bg-[#FCFBF8] px-3.5 py-3 text-ink placeholder:text-muted/70 transition focus:border-forest-light focus:outline-none focus:ring-4 focus:ring-forest-light/10"></textarea>
+          </div>
+
+          <button type="submit" class="inline-flex w-full items-center justify-center gap-2.5 rounded border border-forest bg-forest px-5 py-3.5 font-bold text-white transition-colors hover:bg-forest-light focus:outline-none focus-visible:ring-4 focus-visible:ring-forest-light/30">
+            Prepare Booking Request <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p id="formMessage" class="form-message mt-4 text-sm" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="bg-forest py-16 text-center">
+      <div class="reveal mx-auto w-[min(1120px,90%)]">
+        <h2 class="mb-3 font-serif text-3xl font-semibold text-white md:text-4xl">We look forward to welcoming you.</h2>
+        <p class="mx-auto mb-7 max-w-xl text-[#E0E5DF]">Explore our services and find the right option for your next visit.</p>
+        <a href="services.html" class="inline-flex items-center gap-2 rounded bg-white px-6 py-3 font-bold text-forest transition-colors hover:bg-clay-light">
+          Explore Our Services <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-forest-dark py-10 text-white">
+    <div class="mx-auto flex w-[min(1120px,90%)] flex-wrap items-center justify-between gap-6">
+      <div>
+        <a href="index.html" class="leading-none text-white">
+          <strong class="block font-serif text-[1.55rem] font-bold tracking-wide">MISSI</strong>
+          <span class="text-[.68rem] font-bold tracking-[3px]">AUTO SPA</span>
+        </a>
+        <p class="mt-3 text-sm text-[#D1D8D1]">Car care and personal care in one place.</p>
+      </div>
+      <div class="flex flex-wrap gap-5 text-sm">
+        <a href="index.html" class="transition-colors hover:text-clay-light">Home</a>
+        <a href="services.html" class="transition-colors hover:text-clay-light">Services</a>
+        <a href="about.html" class="transition-colors hover:text-clay-light">About Us</a>
+        <a href="contact.html" class="transition-colors hover:text-clay-light">Contact</a>
+      </div>
+      <p class="text-sm text-[#D1D8D1]">&copy; <span id="year"></span> Missi Auto Spa.</p>
+    </div>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

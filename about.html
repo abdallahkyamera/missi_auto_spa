@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Missi Auto Spa and our car care, wellness, beauty and hospitality services.">
+  <title>About Us | Missi Auto Spa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    :root {
+      --cream: #F8F6F0;
+      --white: #FFFFFF;
+      --green: #26372D;
+      --green-light: #405747;
+      --brown: #9B7653;
+      --text: #343B35;
+      --muted: #737A72;
+      --border: #E5E1D7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; }
+    .container { width: min(1120px, 90%); margin: auto; }
+    .section { padding: 85px 0; }
+    .eyebrow {
+      color: var(--brown);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); }
+    p { color: var(--muted); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 23px;
+      background: var(--green);
+      color: white;
+      border: 1px solid var(--green);
+      border-radius: 4px;
+      font-weight: 600;
+      transition: .25s;
+    }
+    .btn:hover { background: var(--green-light); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--green); }
+    .btn-outline:hover { color: white; }
+
+    .navbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+    .brand { color: var(--green); font-weight: 700; line-height: 1.1; }
+    .brand strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.55rem; }
+    .brand span { font-size: .68rem; letter-spacing: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 27px; }
+    .nav-links a { font-size: .9rem; font-weight: 600; }
+    .nav-links a:hover, .nav-links a.active { color: var(--brown); }
+    .nav-links .nav-cta { background: var(--green); color: white; padding: 11px 17px; border-radius: 4px; }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: var(--green);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .page-hero { padding: 90px 0; text-align: center; background: #EEECE3; }
+    .page-hero h1 { max-width: 850px; margin: 12px auto 18px; }
+    .page-hero p { max-width: 650px; margin: auto; font-size: 1.05rem; }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+    .story-image { width: 100%; height: 460px; object-fit: cover; border-radius: 5px; }
+    .story-copy h2 { margin: 12px 0 20px; }
+    .story-copy p { margin-bottom: 16px; }
+    .story-copy .btn { margin-top: 10px; }
+
+    .values-section { background: var(--white); }
+    .section-heading { text-align: center; max-width: 700px; margin: 0 auto 42px; }
+    .section-heading h2 { margin: 12px 0; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .value-card {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: var(--cream);
+    }
+    .value-card i { font-size: 1.7rem; color: var(--brown); margin-bottom: 20px; }
+    .value-card h3 { font-size: 1.4rem; margin-bottom: 12px; }
+
+    .cta { padding: 75px 0; background: var(--green); text-align: center; }
+    .cta h2 { color: white; margin-bottom: 15px; }
+    .cta p { max-width: 600px; margin: 0 auto 25px; color: #E0E5DF; }
+    .cta .btn { background: white; border-color: white; color: var(--green); }
+    .cta .btn:hover { background: var(--cream); }
+
+    footer { background: #1D2B22; color: white; padding: 35px 0; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+    footer p { color: #D1D8D1; font-size: .9rem; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a:hover { color: #D2B391; }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 800px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        padding: 22px 5%;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links .nav-cta { text-align: center; }
+      .story-grid { grid-template-columns: 1fr; gap: 30px; }
+      .story-image { height: 340px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .section { padding: 60px 0; }
+      .page-hero { padding: 65px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <strong>MISSI</strong><span>AUTO SPA</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Book a Visit</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow">About Missi Auto Spa</span>
+        <h1>More than a service. A place to feel good.</h1>
+        <p>We bring car care, personal wellness, beauty and everyday convenience together in one welcoming place.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container story-grid">
+        <img
+          class="story-image reveal"
+          src="https://images.unsplash.com/photo-洗车?auto=format&fit=crop&w=1000&q=85"
+          alt="Car care and cleaning"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1000&q=85'"
+        >
+        <div class="story-copy reveal">
+          <span class="eyebrow">Our story</span>
+          <h2>Care for your car. Time for yourself.</h2>
+          <p>Missi Auto Spa is built around a simple idea: taking care of your vehicle should be convenient, comfortable and worthwhile.</p>
+          <p>While your car receives attention at our washing bay, you can explore our wellness, massage, sauna, salon and dining services.</p>
+          <p>Our goal is to offer a clean, welcoming environment where customers can take care of several needs in one visit.</p>
+          <a class="btn" href="services.html">Explore Our Services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section values-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">What matters to us</span>
+          <h2>A better experience, every visit</h2>
+          <p>We aim to make every visit straightforward, comfortable and worth your time.</p>
+        </div>
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <h3>Personal Care</h3>
+            <p>We want every customer to feel welcomed, respected and well looked after.</p>
+          </article>
+          <article class="value-card reveal">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <h3>Quality Service</h3>
+            <p>We focus on careful work, cleanliness and attention to the details that matter.</p>
+          </article>
+          <article class="value-card reveal">
+            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            <h3>Convenience</h3>
+            <p>Enjoy a range of car care and personal services in one convenient location.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container reveal">
+        <h2>Your next visit starts here.</h2>
+        <p>Explore our services and get in touch to plan your visit to Missi Auto Spa.</p>
+        <a class="btn" href="contact.html">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html" style="color:white">
+          <strong>MISSI</strong><span>AUTO SPA</span>
+        </a>
+        <p style="margin-top:10px">Car care and personal care in one place.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.tiktok.com/@missi.auto.spa?_r=1&_t=ZS-9AVzcvRrHBo" target="_blank" rel="noopener" aria-label="Follow us on TikTok" class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-yellow-500 bg-yellow-300 text-gray-900 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-yellow-400">
+          <i class="fa-brands fa-tiktok text-2xl"></i>
+        </a>
+      </div>
+      <p>&copy; <span id="year"></span> Missi Auto Spa.</p>
+    </div>
+  </footer>
+
+  <script src="about.js"></script>
+</body>
+</html>
