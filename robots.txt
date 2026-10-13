@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://missi-auto-spa-nateete.netlify.app/sitemap.xml
