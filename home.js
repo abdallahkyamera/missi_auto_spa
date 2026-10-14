@@ -96,7 +96,7 @@ if (currentYear) {
    4. HERO IMAGE FALLBACK
 ========================= */
 
-document.querySelectorAll(".hero-image, .about-image, .winzy-image")
+document.querySelectorAll(".hero-image, .about-image")
     .forEach((image) => {
         image.addEventListener("error", () => {
             image.style.display = "none";
@@ -104,8 +104,3 @@ document.querySelectorAll(".hero-image, .about-image, .winzy-image")
     });
 
 
-/* =========================
-   5. HOMEPAGE READY
-========================= */
-
-console.log("Missi Auto Spa homepage is ready.");

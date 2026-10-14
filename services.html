@@ -1,22 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore car washing, massage, sauna, salon, dining and parking services at Missi Auto Spa.">
- 
-
- 
-<title>Car Wash & Detailing Services | Missi Auto Spa</title>
-
-<meta name="description" content="Explore car washing, interior cleaning, exterior cleaning, and detailing services offered by Missi Auto Spa in Uganda. Contact us for details.">
-
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="Our Services | Missi Auto Spa">
-<meta property="og:description" content="Explore vehicle cleaning and detailing services from Missi Auto Spa.">
-
-
+  <title>Car Wash & Detailing Services | Missi Auto Spa</title>
+  <meta name="description" content="Explore car washing, spa, massage, sauna, salon, dining and parking services at Missi Auto Spa in Uganda. Contact us for details.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Our Services | Missi Auto Spa">
+  <meta property="og:description" content="Explore vehicle cleaning, wellness and beauty services from Missi Auto Spa.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -36,58 +27,24 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
     a { color: inherit; text-decoration: none; }
     button { font: inherit; cursor: pointer; }
     img { display: block; max-width: 100%; }
     .container { width: min(1120px, 90%); margin: auto; }
     .section { padding: 80px 0; }
-    .eyebrow {
-      color: var(--brown);
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+    .eyebrow { color: var(--brown); font-size: .78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
     h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
     h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
     h2 { font-size: clamp(2rem, 4vw, 3rem); }
     p { color: var(--muted); }
+    :focus-visible { outline: 2px solid var(--brown); outline-offset: 3px; }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 22px;
-      border: 1px solid var(--green);
-      border-radius: 4px;
-      background: var(--green);
-      color: white;
-      font-weight: 600;
-      transition: .25s;
-    }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 22px; border: 1px solid var(--green); border-radius: 4px; background: var(--green); color: white; font-weight: 600; transition: .25s; }
     .btn:hover { background: var(--green-light); transform: translateY(-2px); }
 
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
+    .navbar { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); }
+    .nav-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
     .brand { color: var(--green); font-weight: 700; line-height: 1.1; }
     .brand strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.55rem; }
     .brand span { font-size: .68rem; letter-spacing: 3px; }
@@ -95,13 +52,8 @@
     .nav-links a { font-size: .9rem; font-weight: 600; }
     .nav-links a:hover, .nav-links a.active { color: var(--brown); }
     .nav-links .nav-cta { padding: 11px 17px; background: var(--green); color: white; border-radius: 4px; }
-    .menu-toggle {
-      display: none;
-      border: 0;
-      background: transparent;
-      color: var(--green);
-      font-size: 1.5rem;
-    }
+    .nav-links .nav-cta:hover { color: white; background: var(--green-light); }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--green); font-size: 1.5rem; }
 
     .services-hero { background: #EEECE3; padding: 85px 0; text-align: center; }
     .services-hero h1 { max-width: 850px; margin: 12px auto 18px; }
@@ -110,61 +62,79 @@
     .section-heading { text-align: center; max-width: 700px; margin: 0 auto 35px; }
     .section-heading h2 { margin: 12px 0; }
 
-    .service-filters {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 35px;
-    }
-    .filter-btn {
-      padding: 10px 17px;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      background: var(--white);
-      color: var(--text);
-      font-weight: 600;
-      transition: .2s;
-    }
-    .filter-btn:hover, .filter-btn.active {
-      background: var(--green);
-      color: white;
-      border-color: var(--green);
-    }
+    .service-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 44px; }
+    .filter-btn { padding: 10px 18px; border: 1px solid var(--border); border-radius: 30px; background: var(--white); color: var(--text); font-weight: 600; transition: .2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--green); color: white; border-color: var(--green); }
 
+    /* ---------- Service grid ---------- */
     .service-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 23px;
+      gap: 28px;
     }
     .service-card {
-      padding: 30px;
+      display: flex;
+      flex-direction: column;
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: 5px;
-      transition: transform .25s, box-shadow .25s;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color .25s, box-shadow .25s;
     }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(38, 55, 45, .08);
+    .service-card:hover,
+    .service-card:focus-within {
+      border-color: #CFC8B8;
+      box-shadow: 0 14px 32px rgba(38, 55, 45, .10);
     }
     .service-card[hidden] { display: none; }
+
+    .service-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #EEECE3; }
+    .service-image { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .service-card:hover .service-image { transform: scale(1.04); }
+
+    .service-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 4px 12px;
+      background: rgba(255, 255, 255, .94);
+      color: var(--green);
+      border-radius: 30px;
+      font-size: .78rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .service-body { display: flex; flex: 1; flex-direction: column; padding: 0 26px 24px; }
     .service-icon {
-      width: 54px;
-      height: 54px;
+      width: 52px;
+      height: 52px;
       display: grid;
       place-items: center;
-      background: #EEECE3;
-      color: var(--green);
+      margin: -26px 0 18px;
+      position: relative;
+      background: var(--green);
+      color: white;
+      border: 4px solid var(--white);
       border-radius: 50%;
-      font-size: 1.3rem;
-      margin-bottom: 22px;
+      font-size: 1.05rem;
     }
-    .service-number { color: var(--brown); font-size: .78rem; font-weight: 700; letter-spacing: 1px; }
-    .service-card h3 { font-size: 1.45rem; margin: 10px 0; }
-    .service-card p { margin-bottom: 18px; }
-    .service-link { color: var(--green); font-weight: 700; font-size: .9rem; }
-    .service-link i { margin-left: 6px; transition: transform .2s; }
+    .service-card h3 { font-size: 1.4rem; margin-bottom: 8px; color: var(--green); }
+    .service-card p { font-size: .96rem; line-height: 1.65; margin-bottom: 22px; }
+    .service-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--green);
+      font-weight: 700;
+      font-size: .9rem;
+      transition: color .2s;
+    }
+    .service-link:hover { color: var(--brown); }
+    .service-link i { font-size: .8rem; transition: transform .2s; }
     .service-link:hover i { transform: translateX(4px); }
     .no-services { display: none; text-align: center; padding: 25px; color: var(--muted); }
     .no-services.visible { display: block; }
@@ -178,38 +148,24 @@
     footer { background: #1D2B22; color: white; padding: 35px 0; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
     footer p { color: #D1D8D1; font-size: .9rem; }
-    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
     .footer-links a:hover { color: #D2B391; }
 
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    @media (max-width: 950px) {
-      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
+    @media (max-width: 950px) { .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 800px) {
       .menu-toggle { display: block; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 78px;
-        left: 0;
-        width: 100%;
-        padding: 22px 5%;
-        background: white;
-        border-bottom: 1px solid var(--border);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 18px;
-      }
+      .nav-links { display: none; position: absolute; top: 78px; left: 0; width: 100%; padding: 22px 5%; background: white; border-bottom: 1px solid var(--border); flex-direction: column; align-items: stretch; gap: 18px; }
       .nav-links.open { display: flex; }
       .nav-links .nav-cta { text-align: center; }
       .section { padding: 60px 0; }
       .services-hero { padding: 65px 0; }
     }
     @media (max-width: 560px) {
-      .service-grid { grid-template-columns: 1fr; }
-      .service-card { padding: 25px; }
+      .service-grid { grid-template-columns: 1fr; gap: 22px; }
+      .service-body { padding: 0 22px 22px; }
       .service-filters { gap: 8px; }
       .filter-btn { padding: 8px 13px; font-size: .85rem; }
     }
@@ -223,12 +179,8 @@
 <body>
   <header class="navbar">
     <nav class="container nav-inner" aria-label="Main navigation">
-      <a class="brand" href="index.html">
-        <strong>MISSI</strong><span>AUTO SPA</span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <a class="brand" href="index.html"><strong>MISSI</strong><span>AUTO SPA</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
       <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a class="active" href="services.html">Services</a>
@@ -265,61 +217,98 @@
         </div>
 
         <div class="service-grid" id="serviceGrid">
-          <article class="service-card reveal" data-category="auto">
-            <div class="service-icon"><i class="fa-solid fa-car-side"></i></div>
-            <span class="service-number">01 / CAR CARE</span>
-            <h3>Washing Bay</h3>
-            <p>Give your vehicle a thorough clean and a fresh, well-maintained appearance.</p>
-            <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+
+          <article class="service-card" data-category="auto">
+            <div class="service-media">
+              <img class="service-image" src="car_wash.jpeg" alt="Car being washed in the washing bay" loading="lazy">
+              <span class="service-tag">Car care</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon"><i class="fa-solid fa-car-side"></i></div>
+              <h3>Washing Bay</h3>
+              <p>Give your vehicle a thorough clean and a fresh, well-maintained appearance.</p>
+              <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </article>
 
-          <article class="service-card reveal" data-category="wellness">
-            <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
-            <span class="service-number">02 / WELLNESS</span>
-            <h3>Spa Treatments</h3>
-            <p>Make time for personal care in a calm and welcoming environment.</p>
-            <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+          <article class="service-card" data-category="wellness">
+            <div class="service-media">
+              <img class="service-image" src="dinning.jpeg" alt="Spa treatments at Missi Auto Spa" loading="lazy">
+              <span class="service-tag">Wellness</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
+              <h3>Spa Treatments</h3>
+              <p>Make time for personal care in a calm and welcoming environment.</p>
+              <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </article>
 
-          <article class="service-card reveal" data-category="wellness">
-            <div class="service-icon"><i class="fa-solid fa-hands"></i></div>
-            <span class="service-number">03 / WELLNESS</span>
-            <h3>Massage</h3>
-            <p>Take a break from your busy schedule and enjoy a relaxing massage experience.</p>
-            <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+          <article class="service-card" data-category="wellness">
+            <div class="service-media">
+              <img class="service-image" src="massage.jpeg" alt="Massage treatment" loading="lazy">
+              <span class="service-tag">Wellness</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon"><i class="fa-solid fa-hands"></i></div>
+              <h3>Massage</h3>
+              <p>Take a break from your busy schedule and enjoy a relaxing massage experience.</p>
+              <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </article>
 
-          <article class="service-card reveal" data-category="wellness">
-            <div class="service-icon"><i class="fa-solid fa-temperature-high"></i></div>
-            <span class="service-number">04 / WELLNESS</span>
-            <h3>Sauna</h3>
-            <p>Set aside time to unwind in a comfortable sauna setting.</p>
-            <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+          <article class="service-card" data-category="wellness">
+            <div class="service-media">
+              <img class="service-image" src="steam.jpeg" alt="Sauna and steam room" loading="lazy">
+              <span class="service-tag">Wellness</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon"><i class="fa-solid fa-temperature-high"></i></div>
+              <h3>Sauna</h3>
+              <p>Set aside time to unwind in a comfortable sauna setting.</p>
+              <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </article>
 
-          <article class="service-card reveal" data-category="beauty">
-            <div class="service-icon"><i class="fa-solid fa-scissors"></i></div>
-            <span class="service-number">05 / BEAUTY</span>
-            <h3>Salon</h3>
-            <p>Enjoy personal grooming and beauty services during your visit.</p>
-            <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+          <article class="service-card" data-category="beauty">
+            <div class="service-media">
+              <img class="service-image" src="massage.jpeg" alt="Salon services at Missi Auto Spa" loading="lazy">
+              <span class="service-tag">Beauty</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon"><i class="fa-solid fa-scissors"></i></div>
+              <h3>Salon</h3>
+              <p>Enjoy personal grooming and beauty services during your visit.</p>
+              <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </article>
 
-          <article class="service-card reveal" data-category="hospitality">
-            <div class="service-icon"><i class="fa-solid fa-utensils"></i></div>
-            <span class="service-number">06 / DINING</span>
-            <h3>Boiled Chicken & kirenge</h3>
-            <p>Take a break and enjoy a meal while you spend time at Missi Auto Spa.</p>
-            <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+          <article class="service-card" data-category="hospitality">
+            <div class="service-media">
+              <img class="service-image" src="kirengee.jfif" alt="Boiled chicken served with kirenge" loading="lazy">
+              <span class="service-tag">Dining</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon"><i class="fa-solid fa-utensils"></i></div>
+              <h3>Boiled Chicken &amp; Kirenge</h3>
+              <p>Take a break and enjoy a meal while you spend time at Missi Auto Spa.</p>
+              <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </article>
 
-          <article class="service-card reveal" data-category="hospitality">
-            <div class="service-icon"><i class="fa-solid fa-square-parking"></i></div>
-            <span class="service-number">07 / CONVENIENCE</span>
-            <h3>Parking</h3>
-            <p>Make use of parking facilities when visiting our services.</p>
-            <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+          <article class="service-card" data-category="hospitality">
+            <div class="service-media">
+              <img class="service-image" src="aerial_view.jpeg" alt="Aerial view of the Missi Auto Spa parking area" loading="lazy">
+              <span class="service-tag">Convenience</span>
+            </div>
+            <div class="service-body">
+              <div class="service-icon"><i class="fa-solid fa-square-parking"></i></div>
+              <h3>Parking</h3>
+              <p>Make use of parking facilities when visiting our services.</p>
+              <a class="service-link" href="contact.html">Ask about this service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </article>
+
         </div>
 
         <p class="no-services" id="noServices">No services found in this category.</p>
@@ -338,9 +327,7 @@
   <footer>
     <div class="container footer-inner">
       <div>
-        <a class="brand" href="index.html" style="color:white">
-          <strong>MISSI</strong><span>AUTO SPA</span>
-        </a>
+        <a class="brand" href="index.html" style="color:white"><strong>MISSI</strong><span>AUTO SPA</span></a>
         <p style="margin-top:10px">Car care and personal care in one place.</p>
       </div>
       <div class="footer-links">
@@ -348,9 +335,7 @@
         <a href="services.html">Services</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.tiktok.com/@missi.auto.spa?_r=1&_t=ZS-9AVzcvRrHBo" target="_blank" rel="noopener" aria-label="Follow us on TikTok" class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-yellow-500 bg-yellow-300 text-gray-900 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-yellow-400">
-  <i class="fa-brands fa-tiktok text-2xl"></i>
-</a>
+        <a href="https://www.tiktok.com/@missi.auto.spa?_r=1&_t=ZS-9AVzcvRrHBo" target="_blank" rel="noopener" aria-label="Follow us on TikTok"><i class="fa-brands fa-tiktok"></i></a>
       </div>
       <p>&copy; <span id="year"></span> Missi Auto Spa.</p>
     </div>
